@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-minikube-2
+  name: hello-minikube
 spec:
   selector:
     matchLabels:
-      app: hello-minikube-2
+      app: hello-minikube
   replicas: 2
   template:
     metadata:
       labels:
-        app: hello-minikube-2
+        app: hello-minikube
     spec:
       containers:
       - name: echo-server
@@ -21,13 +21,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-minikube-service-2
+  name: hello-minikube-service
 spec:
   type: NodePort
   selector:
-    app: hello-minikube-2
+    app: hello-minikube
   ports:
     - protocol: TCP
-      port: 8081
-      targetPort: 8081
+      port: 8080
+      targetPort: 8080
       nodePort: 30010
