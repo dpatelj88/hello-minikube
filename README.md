@@ -1,4 +1,4 @@
-# hello-minikube
+# hello-minikube Project
 
 # 1. Install Prerequisites
 Make sure you have the following installed:
@@ -14,10 +14,10 @@ mkdir hello-minikube
 cd hello-minikube
 code .
 
-# 3. Create OR Copy Dockerfile and deployment.yaml files from this repo
+# 3. Create OR Copy 
+Dockerfile and deployment.yaml files from this repo
 
 # 4. Command 
-
 kubectl apply -f deployment.yaml
 kubectl get pods
 kubectl get svc
